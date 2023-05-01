@@ -1,0 +1,50 @@
+Moje uwagi do kodu w pliku sample_test.cy.ts, numeracja adekwatna jest do odpowiedniej lini w kodzie:
+// 1 - import exp from "constants" - import nie jest używany, w tym wypadku można go usunąć zmiejszając ilość kodu
+// 5 - powinno się zastosować camelCase a string powinień być pod pojedynczym nawiasem ' ' i taka zasadę powinno się przyjąć dla całego testu 
+// 21 - 27 - zastosować camelCase i ujednolicić nazwy zmiennych 
+// 29 - nawiasy powinny być na odwrót i kod powinień wygladać tak - '[data-cy="add_to_basket_modal_layout"]';
+// 32 - zastosowanie podwójnych nawiasów zamiast ' '
+// 38 - zmienna password nie pownina być w nawiasach 
+
+                            1 produkt
+
+// 47 - zastosowanie podwójnych nawiasów zamiast ' ' 
+// 51 - funkcja .fill powinna być zamieniona na funkcjie .type
+// 53 - nawiasy powinny być na odwrót i kod powinień wygladać tak - .find('[data-cy="product_title"]')
+// 56 - GET powinno być w 'GET' oraz podwójne nawiasy powinny być zamienienione na pojedyncze
+// 58 - przy wartości "resp" - powinno się usunać zbędne nawiasy, kod powinien wyglądać tak - cy.wait('basket_response').then(resp => expect(resp.response.statusCode).to.be.above(200)) - kod powinien zadziałać
+// 60 - dwa razy zastosowany podwojny nawias przy get, kod powinien wyglądać tak - cy.get('[data-cy="add_to_basket_modal_layout"]')
+// 61 - .click nie został wywołan, powninno być - .click()
+
+                            2gi produkt
+
+// 64 - patrz wyżej linia 47 
+// 68 - patrz wyżej linia 51 
+// 70 - patrz wyżej linia 53 
+// 73 - patrz wyżej linia 56
+// 75 - patrz wyżej linia 58
+// 76 - patrz wyżej linia 60
+// 77 - patrz wyżej linia 61
+
+                            3gi produkt
+
+// 81 - patrz wyżej linia 47 
+// 85 - patrz wyżej linia 51 
+// 87 - patrz wyżej linia 53
+// 90 - patrz wyżej linia 56
+// 92 - patrz wyżej linia 58
+// 93 - patrz wyżej linia 60
+// 94 - patrz wyżej linia 61
+// 96 - 101 - komentarze powinny być usunięte a całość kodu powinna być przesunięta po kroku usunięcia 2 poduktów z koszyka. Dodatkowo w liniach: 
+100 - dwa razy zastosowany podwojny nawias przy get, kod powinien wyglądać tak - cy.get('[data-cy="add_to_basket_modal_layout"]')
+101 - .click nie został wywołan, powninno być - .click()
+// 105 - funkcja .open powinna być zamieniona na funkcjie .visit
+// 107 - upewnić się, czy lokator nie pownień być inny do cent ? 
+// 111 - w arrayOfPrices ostatnia zmienna powina być inna i zamieniona z PrductName3 na PrductPrice3
+// 113 - zamiana podwójnego nawiasu na pojedynczy oraz usunięcie zbędnych nawiasów przy each, kod powinień wyglądać tak - cy.contains('cena').each(price => { .....
+// 120 - 121 - przy funkcji filter zastosowanie pojedynczych nawiasów 
+// 124 - zastosowanie pojedynczych nawiasów zamiast podwójnych
+// 125 - zastosowanie pojedynczych nawiasów zamiast podwójnych oraz selector powinień być bardziej dokładny
+// 126 - nawiasy powinny być na odwrót i kod powinień wygladać tak - ('[data-cy="Załóż konto"]') oraz brak funkcji .click();
+// 127 - zamiana cy.window() na cy.url();
+// Dodatkowo przy zakończeniu kodu w lini postawić ";"
