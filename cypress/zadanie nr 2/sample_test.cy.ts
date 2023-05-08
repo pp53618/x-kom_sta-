@@ -55,7 +55,7 @@ describe('TEST SCENARIO', () => {
          .click();
          cy.intercept(GET, "**/baskets").as("basket_response")
          cy.contains('Dodaj do koszyka').filter(':visible').wait(3000).click().should('be.visible');
-         cy.wait('basket_response').then((resp) => expect(resp.response.statusCode).to.be.above(200))
+         cy.wait('basket_response').then(resp => expect(resp.response.statusCode).to.be.above(200))
 
       cy.get("[data-cy="add_to_basket_modal_layout"]").should('have.visibility');
       cy.contains(modalLayout, 'Wróć do zakupów').click;

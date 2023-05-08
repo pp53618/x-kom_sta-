@@ -15,7 +15,6 @@ describe('E2E - Zamówienie-przejście do podsumowania', () => {
         cy.get('.dRLEBj').click();
         cy.wait(3000);
         // Krok nr.4 - sprawdzenie cookie
-        /*
         cy.getCookie('trackingPermissionConsentsValue').then((cookie) => {
             const dekodowanaWartosc = decodeURIComponent(cookie.value);
             const przeanalizowanaWartosc = JSON.parse(dekodowanaWartosc);
@@ -23,13 +22,12 @@ describe('E2E - Zamówienie-przejście do podsumowania', () => {
             expect(przeanalizowanaWartosc.cookies_personalization).to.be.true;
             expect(przeanalizowanaWartosc.cookies_advertisement).to.be.true;
         });
-        */
         // Krok nr.5 - werefikacja widoczności widgetu
         cy.get('#hotShot').should('be.visible');
         // Krok nr.6 - werefikacja widoczności ceny
         cy.get('#hotShot').get('p').contains('zł').first().should('be.visible');
-        // Krok nr.7 - werefikacja widoczności ceny
-        //cy.get('.cIxhty').contains('Następny gorący strzał:').should('be.visible');
+        // Krok nr.7 - werefikacja widoczności nazwy
+        cy.get('.cIxhty').contains('Następny gorący strzał:').should('be.visible');
         // Krok nr.8 - kliknięcie w widget gorący strzał
         cy.get('.xdUIb').click();
         // Krok nr. 9 - werefikacja przejscia na stronę /goracy_strzal
